@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "luan.com.androidmvp"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "END_POINT", "\"https://api.unsplash.com/\""
+        buildConfigField "String", "TOKEN", "\"a81fef08f9c678f4d2f10622a5f344e297b740861154aa87cf0810c344f43f83\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:support-annotations:25.4.0'
+
+    //instructmentation testing
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestCompile "org.mockito:mockito-core:2.+"
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:rules:1.0.1'
+    androidTestCompile 'org.mockito:mockito-android:2.10.0'
+
+    //support library
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+
+    //rxjava + rxandroid
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    //retrofit 2
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+
+    //glide - load image
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //dagger 2
+    compile 'com.google.dagger:dagger:2.0'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'javax.inject:javax.inject:1'
+
+    //butterknife - bindview
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    //local testing
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.+"
+}
