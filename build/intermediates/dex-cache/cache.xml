@@ -2,22 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/ntluan/Desktop/mvptesting/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/ntluan/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.11.0/f819efbe6ef3f010382cdc1b4d33749e377e1cc4/mockito-core-2.11.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="086df95c325c104dedb9c444b3b1c51cc6a0e1fa">
-        <dex dex="/Users/ntluan/Desktop/mvptesting/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3a0a9cb3c626efeb6cf012ba3a3694968e5f4a92/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ntluan/Desktop/mvptesting/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/ntluan/Desktop/mvptesting/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b4c31899a03baf9d15ef1137e36ebe69911458ab/classes.dex" />
+        sha1="f819efbe6ef3f010382cdc1b4d33749e377e1cc4">
+        <dex dex="/Users/ntluan/Desktop/mvptesting/app/build/intermediates/pre-dexed/androidTest/debug/mockito-core-2.11.0_8b4a56cbc491c4823b34bcfdfa567415eda6612e.jar" />
     </item>
 
 </items>

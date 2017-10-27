@@ -51,4 +51,9 @@ public class PhotoPresenter implements Photo.Presenter {
     public void removeView() {
         mView = null;
     }
+
+    //for testing
+    public Photo.View getView() {
+        return mView;
+    }
 }

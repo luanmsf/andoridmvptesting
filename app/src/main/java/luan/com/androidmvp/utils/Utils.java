@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
 import android.media.AudioManager;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
 import static android.media.AudioManager.RINGER_MODE_SILENT;
@@ -42,5 +43,11 @@ public class Utils {
             int max = audioManager.getStreamMaxVolume(STREAM_RING);
             audioManager.setStreamVolume(STREAM_RING, max, 0);
         }
+
+
+    }
+
+    public void test(String text) {
+        boolean testCheck = TextUtils.isEmpty(text);
     }
 }

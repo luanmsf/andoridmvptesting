@@ -3,6 +3,8 @@ package luan.com.androidmvp;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 
 import java.util.ArrayList;
 
@@ -12,6 +14,8 @@ import rx.Observable;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 /**
@@ -50,5 +54,13 @@ public class PresenterTest {
         mPhotoPresenter.requestToGetData(anyString());
 
         verify(mMockPhotoView).showError();
+    }
+
+    @Test
+    public void test_Real() {
+        Mockito.when(mMockPhotoModel.getDataFromServer(anyString())).thenReturn(Observable.just(new ArrayList<Photo>()));
+
+        mPhotoPresenter.requestToGetData(anyString());
+        verify(mPhotoPresenter).requestToGetData("");
     }
 }

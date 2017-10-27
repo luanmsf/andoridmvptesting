@@ -35,9 +35,6 @@ public class PhotoActivity extends AppCompatActivity implements Photo.View, View
     @Bind(R.id.recylerview_photo)
     RecyclerView mRecylerViewPhoto;
 
-    @Bind(R.id.btn_load)
-    Button mBtnLoad;
-
     @Inject
     public Photo.Presenter mMainPresenter;
 
@@ -55,8 +52,7 @@ public class PhotoActivity extends AppCompatActivity implements Photo.View, View
         initDagger();
         initMvp();
         initView();
-
-        mBtnLoad.setOnClickListener(this);
+        loadFirstTime();
     }
 
     @Override
